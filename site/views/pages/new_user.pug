@@ -1,0 +1,38 @@
+extends ../layout.pug
+
+block main
+  section.hero.is-warning.is-2
+    .hero-body
+      .container.form-container.has-text-centered
+        p.is-fredoka.is-size-2 Create New Account
+        br
+        br
+        if locals.error_msg
+          p.is-text-danger= error_msg
+        form#create_user(method="POST", action='http://localhost:8080/')
+          .form-group.control.has-icons-left
+            input#username.form-control.input.is-medium(type="text", name="username", placeholder="Username")
+            span.icon.is-small.is-left
+              i.fas.fa-user
+          br
+          .form-group.control.has-icons-left
+            input#new_password.form-control.input.is-medium(type="password", name="password", placeholder="Password")
+            span.icon.is-small.is-left
+              i.fas.fa-lock
+          br
+          .form-group.control.has-icons-left
+            input#new_password2.form-control.input.is-medium(type="password", name="password2", placeholder="Confirm Password")
+            span.icon.is-small.is-left
+              i.fas.fa-lock
+          br
+          .field
+            .control
+              label.checkbox
+                input(type="checkbox")
+                =" I agree to the "
+                a(href="#")="Terms and Conditions"
+          button.button.is-medium.is-fredoka(type="submit") Submit
+  section.hero.header-image
+    .hero-body
+      .container.has-text-centered
+        br(style="line-height:24")

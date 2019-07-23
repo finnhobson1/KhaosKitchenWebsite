@@ -1,0 +1,69 @@
+extends ../layout.pug
+
+block main
+  section.hero.is-2.header-image
+    .hero-body
+      .container.big-container.has-text-centered
+        img(src="../media/logo.svg", width="40%")
+        h1.title.is-size-1.is-fredoka.has-text-light.has-text-border="Hey " + welcome_name + "! Welcome to Khaos Kitchen!"
+        a(href='https://itunes.apple.com/WebObjects/MZStore.woa/wa/')
+          img.appstore-img(src="../media/store-apple.svg")
+        a(href='https://play.google.com/store')
+          img.appstore-img(src="../media/store-google.svg")
+  section.hero.is-dark.is-2.is-bold
+    .hero-body
+      .columns.is-centered.is-vcentered
+        .column.small-container
+          span.heading.has-text-centered.is-size-2.is-fredoka The ultimate multiplayer mobile gaming experience
+        .column.has-text-centered.small-container
+          span.heading.is-size-4.is-fredoka TRAILER COMING SOON...
+          iframe.is-mobile(src="https://www.youtube.com/embed/XIMLoLxmTDw", frameborder="0", allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", width="448", height="252", allowfullscreen)
+  section.hero.is-2.header-image
+    .hero-body
+      .container
+        p.is-size-3.has-text-centered.has-text-light.is-fredoka.has-text-border
+          | Khaos Kitchen is a fast-paced mobile party game where 2 to 8 players become the chefs of a crazy kitchen!
+          | Players must work together to complete a wide range of tasks before the timer runs out to keep their
+          | customers happy and keep their restaurant open for as long as possible!
+        img.screenshot.img-has-shadow(src="../media/screenshot.png")
+      .container.big-container
+        .tile.is-ancestor
+          .tile.is-parent
+            .tile.is-child.box.is-red.has-text-light
+              p.is-fredoka.is-size-3.has-text-shadow COMMUNICATE!
+              p.is-size-4 Shout instructions to your fellow chefs and listen out for tasks that you can complete! Teamwork is essential!
+          .tile.is-parent
+            .tile.is-child.box.is-red.has-text-light
+              p.is-fredoka.is-size-3.has-text-shadow RUN!
+              p.is-size-4 Run around the physical kitchen and tap your device on NFC beacons to grab ingredients and serve the food!
+          .tile.is-parent
+            .tile.is-child.box.is-red.has-text-light
+              p.is-fredoka.is-size-3.has-text-shadow FIND!
+              p.is-size-4 Use the camera to find hidden objects scattered around the physical kitchen!
+        .tile.is-ancestor
+          .tile.is-parent
+            .tile.is-child.box.is-red.has-text-light
+              p.is-fredoka.is-size-3.has-text-shadow SHAKE!
+              p.is-size-4 Shake your device to season the food and put out fires!
+          .tile.is-parent
+            .tile.is-child.box.is-red.has-text-light
+              p.is-fredoka.is-size-3.has-text-shadow SHOUT!
+              p.is-size-4 Shout as loud as you can into your device's microphone to wake up the waiters!
+          .tile.is-parent
+            .tile.is-child.box.is-red.has-text-light
+              p.is-fredoka.is-size-3.has-text-shadow UPGRADE!
+              p.is-size-4 Earn coins to buy upgrades for your chef and your restaurant!
+        .container.has-text-centered
+          br
+          a.title.has-text-light.is-fredoka.has-text-border(href="/tutorial") Click here to find out how to play >>
+  section.hero.is-dark.is-2.is-bold
+    .hero-body
+      .columns.is-centered.is-vcentered
+        .column.small-container
+          p.h1.has-text-centered.is-size-3 &quotPretty much the perfect game!&quot
+          br
+          p.title.h2.has-text-centered.is-size-4.is-fredoka Random Child 1, Testing Day
+        .column.has-text-centered.small-container
+          p.h1.has-text-centered.is-size-3 &quotThe only game without any bugs!&quot
+          br
+          p.title.h2.has-text-centered.is-size-4.is-fredoka Random Child 2, Testing Day

@@ -1,0 +1,40 @@
+//- Start rendering page
+nav.navbar.is-dark.has-shadow
+  .container
+    .navbar-brand
+      a.navbar-item(href='/')
+        img(src="../media/logo.svg")
+      span.navbar-burger.burger(data-target='navbarMenu')
+        span
+        span
+        span
+    .navbar-menu
+      .navbar-end
+        a.navbar-item.is-size-5.is-fredoka(href='/') Home
+        a.navbar-item.is-size-5.is-fredoka(href='/tutorial') Tutorial
+        a.navbar-item.is-size-5.is-fredoka(href='/forum') Forum
+        if locals.logged_in
+          a#logout_button.navbar-item.has-text-danger.is-size-5.is-fredoka Logout
+        else
+          a.login_button.navbar-item.has-text-success.is-size-5.is-fredoka Login
+.modal#popup_login
+  .modal-background
+  .modal-card#login_box
+    header.modal-card-head
+      p.modal-card-title.is-fredoka Login
+      button#close_login.delete(aria-label='close')
+    section.modal-card-body
+      p#incorrect-login-msg.has-text-centered.has-text-danger Incorrect Login Details
+      form#login_form(method="POST", action='http://localhost:8080/login')
+        .field
+          p.form-group.control.has-icons-left
+            input#username.form-control.input.is-medium(type="text", name="username", placeholder="Username")
+            span.icon.is-small.is-left
+              i.fas.fa-user
+        .field
+          p.form-group.control.has-icons-left
+            input#password.form-control.input.is-medium(type="password", name="password", placeholder="Password")
+            span.icon.is-small.is-left
+              i.fas.fa-lock
+          button.button.is-fredoka.is-medium(type="submit") Submit
+      a(href='/new_user') No account? Register here
